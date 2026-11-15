@@ -1,0 +1,33 @@
+### REGISTER
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username": "ponnu",
+    "email": "ponnu@gmail.com",
+    "password": "Ponnu@123"
+}
+### CHECK WALLET
+GET http://127.0.0.1:8000/wallet/?user_id=2
+
+### ADD MONEY
+POST http://127.0.0.1:8000/add_money/
+Content-Type: application/json
+
+{
+    "user_id": 1,
+    "amount": 5000
+}
+
+### SEND MONEY
+POST http://127.0.0.1:8000/send_money/
+Content-Type: application/json
+
+{
+    "sender_id": 1,
+    "receiver_id": 3,
+    "amount": 1000
+}
+
+### TRANSACTION HISTORY
+GET http://127.0.0.1:8000/transactions/?user_id=1
